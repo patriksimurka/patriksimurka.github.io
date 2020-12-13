@@ -155,33 +155,38 @@ for(i=ziaci.length+1; i<=30; i++){
 
 var uz = [];
 
+var click = true;
+
 $(document).on('click', 'button', function () {
 
-	revert();
-	
-	$(this).css({'background-color':"#6b027d","color":"white","font-weight":"900","width":"140px","margin-left":"auto"});
-	
-	ake = $( this ).find(".cislo").attr( "id" );
-	var uz_ziaci = [];
-	if(!uz.includes(ake)){
-		$( this ).find(".cislo").text( ziaci.pop() );
-		uz.push(ake);
-		var temp = ziaci.slice();
-		var vsetky = document.getElementsByClassName("cislo");
-		for (i=0; i<=vsetky.length-1; i++) {
-			// console.log(vsetky[i]);
-			if((vsetky[i]).innerHTML == '???'){
-				vsetky[i].style.fontSize = '12px';
-				vsetky[i].innerHTML = (temp.pop());
-				shuffle(temp);
-			}
-		setTimeout(function(){revert();}, 750);
-		}	
-	shuffle(ziaci);
-	};
-	localStorage.setItem("ziaci_5", JSON.stringify(ziaci));
-});
+	if(click) {
 
+		revert();
+		
+		$(this).css({'background-color':"#6b027d","color":"white","font-weight":"900","width":"140px","margin-left":"auto"});
+		
+		ake = $( this ).find(".cislo").attr( "id" );
+		var uz_ziaci = [];
+		if(!uz.includes(ake)){
+			$( this ).find(".cislo").text( ziaci.pop() );
+			uz.push(ake);
+			var temp = ziaci.slice();
+			var vsetky = document.getElementsByClassName("cislo");
+			for (i=0; i<=vsetky.length-1; i++) {
+				// console.log(vsetky[i]);
+				if((vsetky[i]).innerHTML == '???'){
+					vsetky[i].style.fontSize = '12px';
+					vsetky[i].innerHTML = (temp.pop());
+					shuffle(temp);
+				}
+				setTimeout(function(){revert();}, 750);
+			}	
+			shuffle(ziaci);
+		};
+		localStorage.setItem("ziaci_5", JSON.stringify(ziaci));
+	}
+	no_click();
+});
 document.getElementById("reset").onclick = function(){
 	localStorage.setItem("ziaci_5", JSON.stringify(orig_ziaci));
 	location.reload();
