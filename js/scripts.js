@@ -22,8 +22,13 @@ function revert() {
     var j = i.toString();
     var tento = document.getElementById(j);
     if(tento != null && tento.parentElement.style.color!='white'){
-      tento.style.fontSize = '18px';
+      tento.style.fontSize = '16px';
       tento.innerHTML = '???';
     }
   }
+}
+
+function no_click() {
+  click = false;
+  setTimeout(function() {click = true;}, 700);  
 }
