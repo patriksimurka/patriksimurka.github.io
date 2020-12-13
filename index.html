@@ -184,9 +184,10 @@ $(document).on('click', 'button', function () {
 			shuffle(ziaci);
 		};
 		localStorage.setItem("ziaci_5", JSON.stringify(ziaci));
+		no_click();
 	}
-	no_click();
 });
+
 document.getElementById("reset").onclick = function(){
 	localStorage.setItem("ziaci_5", JSON.stringify(orig_ziaci));
 	location.reload();
