@@ -1,0 +1,117 @@
+body {
+	overflow-x: hidden;
+    margin: 0;
+    background-image: url(../img/bg.jpeg);
+	font-family: 'Jura', sans-serif;
+	background-repeat: no-repeat;
+	background-size:cover;
+
+}
+
+#obal.container-fluid {
+	max-width:950px ;
+	margin:30px auto;
+    padding:0px;	
+}
+
+#obal >.jumbotron {
+ 	color: #fff;
+  	background:#d305f7;
+	background: -moz-linear-gradient(left, #6b027d 13%, #9904b3 49%, #d305f7 100%);
+	background: -webkit-linear-gradient(left, #6b027d 13%,#9904b3 49%,#d305f7 100%);
+	background: linear-gradient(to right, #6b027d 13%,#9904b3 49%,#d305f7 100%);
+  	padding:20px 15px;
+  	margin:0;
+  	-webkit-border-radius: 15px 15px 0 0;
+  	-moz-border-radius: 15px 15px 0 0;
+  	border-radius: 15px 15px 0 0;
+}
+
+#obal >.obsah {
+	background-color: rgba(255, 255, 255, 0.7);
+	top: -2px;
+    position: relative;
+	padding-left:40px;
+	padding-right:20px;
+	-webkit-border-radius: 0 0 15px 15px !important;
+    -moz-border-radius: 0 0 15px 15px !important;
+    border-radius: 0 0 15px 15px !important ;
+}
+
+#obal  div.jumbotron  h3#nadpis {
+	margin-top:20px;
+	font-size:27px;
+	letter-spacing:2px;
+}
+
+h4.oznam {
+	color:#910f23;
+	margin:15px 0px;
+	font-weight:700;
+}
+
+img.obraz {
+	width:50px !important;
+	height:50px !important;
+}
+
+#obal {
+	min-height: calc(100vh-100px);
+}	
+
+.footer * {
+	margin:0px auto !important;
+	padding:1px 0px 0px 0px !important;
+}
+
+.footer {
+	min-height: 0vh !important;
+	position: fixed;
+	bottom: -30px;
+	width:950px ;
+    padding:0px;
+    left: 50%;
+  	transform:translateX(-50%);
+}
+
+.footer > .jumbotron{
+  	background: -moz-linear-gradient(left, #d305f7 13%, #9904b3 49%, #6b027d 100%) !important;
+	background: -webkit-linear-gradient(left, #d305f7 13%,#9904b3 49%,#6b027d 100%) !important;
+	background: linear-gradient(to right, #d305f7 13%,#9904b3 49%,#6b027d 100%) !important;
+}
+
+html{
+	min-height: 100vh;
+}
+
+h4 {
+	padding-left: 21px;
+}
+
+
+/* responsive*/
+@media (max-width: 400px) {
+	
+	#obal.container-fluid {	
+	margin:0;
+   	background-color:transparent;
+	}
+	
+	#obal >.obsah {	
+	padding-left:15px;
+	padding-right:10px;
+	}
+	
+	#obal  div.jumbotron  h3#nadpis {
+		font-size:24px;
+		letter-spacing:0px;
+		margin-top:15px;
+	}
+	
+	img.obraz {
+	width:35px !important;
+	height:35px !important;
+	}
+	
+}
+
