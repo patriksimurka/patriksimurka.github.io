@@ -136,10 +136,14 @@ a {
 
 <script type="text/javascript" language="javascript">
 
+var orig_ziaci = ['Chorvát', 'Danihelová', 'Papíková', 'Šimurka', 'Demčák', 'Bušovská', 'Skokan', 'Kapusta', 'Valeková', 'Pupák', 'Procházková', 'Letavay', 'Krilek', 'Košárek', 'Langa', 'Garguláková', 'Gero', 'Jakubócyová', 'Galiová', 'Hammerová', 'Garčala', 'Mokriš'];
+
+shuffle(orig_ziaci);
+
 var storedNames = JSON.parse(localStorage.getItem("ziaci_5"));
 
 if(storedNames === null || storedNames.length == 0) {
-	var ziaci = ['Chorvát', 'Danihelová', 'Papíková', 'Šimurka', 'Demčák', 'Bušovská', 'Skokan', 'Kapusta', 'Valeková', 'Pupák', 'Procházková', 'Letavay', 'Krilek', 'Košárek', 'Langa', 'Garguláková', 'Gero', 'Jakubócyová', 'Galiová', 'Hammerová', 'Garčala', 'Mokriš'];
+	var ziaci = orig_ziaci;
 } else {
 	var ziaci = storedNames;
 }
@@ -179,7 +183,7 @@ $(document).on('click', 'button', function () {
 });
 
 document.getElementById("reset").onclick = function(){
-	localStorage.setItem("ziaci_5", JSON.stringify(['Chorvát', 'Danihelová', 'Papíková', 'Šimurka', 'Demčák', 'Bušovská', 'Skokan', 'Kapusta', 'Valeková', 'Pupák', 'Procházková', 'Letavay', 'Krilek', 'Košárek', 'Langa', 'Garguláková', 'Gero', 'Jakubócyová', 'Galiová', 'Hammerová', 'Garčala', 'Mokriš']));
+	localStorage.setItem("ziaci_5", JSON.stringify(orig_ziaci));
 	location.reload();
 	return false;
 }
