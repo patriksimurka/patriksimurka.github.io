@@ -169,6 +169,7 @@ $(document).on('click', 'button', function () {
 			if((vsetky[i]).innerHTML == '???'){
 				vsetky[i].style.fontSize = '12px';
 				vsetky[i].innerHTML = (temp.pop());
+			shuffle(temp);
 			}
 		setTimeout(function(){revert();}, 750);
 		}	
