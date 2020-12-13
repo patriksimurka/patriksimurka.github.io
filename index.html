@@ -18,13 +18,13 @@ button {
 }
 
 a {
-	color: #FFFFFF;
+	color: #ffec73;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .active {
 	text-decoration: underline;
-	color: yellow;
+	color: orange;
 }
 
 </style>
@@ -36,17 +36,17 @@ a {
     <div class="jumbotron " style='position: relative;z-index:100;'>
 		<div class="row">
 			<div class="col-xs-2" style="padding-right:0;text-align:center">
-				<p style="margin-top:12px;"><img class="obraz" src="img/hf_inv.png"  /></p>
+				<p style="margin-top:12px;"><img class="obraz" id='reset' src="img/hf_inv.png"  /></p>
 			</div>
 			<div class="col-xs-10" style="padding-right:0" >
-				<h3 id="nadpis" >Skúšanie MAT <a href='skusanie_mat_4.html'>4</a>/<a href='skusanie_mat_5.html'  class='active'>5</a></h3>
+				<h3 id="nadpis" >Skúšanie MAT <a href='skusanie_mat_5.html'  class='active'>5</a> / <a href='skusanie_mat_6.html'>6</a></h3>
 			</div>
 		</div>
 	</div>
 
 	<div class="obsah " style="border:1px solid #6b027d;margin-bottom:40px;position:relative">
 		<br>
-		<h4>Kliknutím si vyberte číslo</h4>
+		<h4>Kliknutím si vyberte číslo, kliknutím na logo školy resetujte</h4>
 		<div class="row" style="margin:20px auto">
 		
 			<div class="col-xs-2" style="margin-bottom:10px;padding:0">
@@ -169,7 +169,7 @@ $(document).on('click', 'button', function () {
 			if((vsetky[i]).innerHTML == '???'){
 				vsetky[i].style.fontSize = '12px';
 				vsetky[i].innerHTML = (temp.pop());
-			shuffle(temp);
+				shuffle(temp);
 			}
 		setTimeout(function(){revert();}, 750);
 		}	
@@ -177,6 +177,12 @@ $(document).on('click', 'button', function () {
 	};
 	localStorage.setItem("ziaci_5", JSON.stringify(ziaci));
 });
+
+document.getElementById("reset").onclick = function(){
+	localStorage.setItem("ziaci_5", JSON.stringify(['Chorvát', 'Danihelová', 'Papíková', 'Šimurka', 'Demčák', 'Bušovská', 'Skokan', 'Kapusta', 'Valeková', 'Pupák', 'Procházková', 'Letavay', 'Krilek', 'Košárek', 'Langa', 'Garguláková', 'Gero', 'Jakubócyová', 'Galiová', 'Hammerová', 'Garčala', 'Mokriš']));
+	location.reload();
+	return false;
+}
 		
 </script>
 </html>
