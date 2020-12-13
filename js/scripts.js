@@ -33,6 +33,7 @@ function no_click() {
   setTimeout(function() {click = true;}, 700);  
 }
 
+//not in use yet
 function main(skupina) {
   shuffle(orig_ziaci);
 
