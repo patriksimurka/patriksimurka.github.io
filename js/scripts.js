@@ -30,7 +30,7 @@ function revert() {
 
 function no_click() {
   click = false;
-  setTimeout(function() {click = true;}, 700);  
+  setTimeout(function() {click = true;}, 750);  
 }
 
 //not in use yet
