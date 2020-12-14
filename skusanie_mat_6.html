@@ -190,7 +190,7 @@ $(document).on('click', 'button', function () {
 });
 
 document.getElementById("reset").onclick = function(){
-	localStorage.setItem("ziaci_6", JSON.stringify(orig_ziaci));
+	localStorage.removeItem("ziaci_6");
 	location.reload(true);
 }
 
