@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Losovanie Mat 6</title>
 <link rel="shortcut icon" href="img/hf_inv.png" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -142,6 +142,8 @@ shuffle(orig_ziaci);
 
 var storedNames = JSON.parse(localStorage.getItem("ziaci_6"));
 
+console.log(storedNames);
+
 if(storedNames === null || storedNames.length == 0){
 	var ziaci = orig_ziaci;
 } else {
@@ -178,7 +180,6 @@ $(document).on('click', 'button', function () {
 					vsetky[i].style.fontSize = '12px';
 					vsetky[i].innerHTML = (temp.pop());
 				}
-			//no_click();
 				setTimeout(function(){revert();}, 750);
 			}	
 			shuffle(ziaci);
@@ -190,8 +191,7 @@ $(document).on('click', 'button', function () {
 
 document.getElementById("reset").onclick = function(){
 	localStorage.setItem("ziaci_6", JSON.stringify(orig_ziaci));
-	location.reload();
-	return false;
+	location.reload(true);
 }
 
 </script>
