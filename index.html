@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Losovanie Mat 5</title>
 <link rel="shortcut icon" href="img/hf_inv.png" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -39,7 +39,7 @@ a {
 				<p style="margin-top:12px;"><img class="obraz" id='reset' src="img/hf_inv.png"  /></p>
 			</div>
 			<div class="col-xs-10" style="padding-right:0" >
-				<h3 id="nadpis" >Skúšanie MAT <a href='skusanie_mat_5.html'  class='active'>5</a> / <a href='skusanie_mat_6.html'>6</a></h3>
+				<h3 id="nadpis" >Skúšanie MAT <a href='index.html'  class='active'>5</a> / <a href='skusanie_mat_6.html'>6</a></h3>
 			</div>
 		</div>
 	</div>
@@ -173,7 +173,6 @@ $(document).on('click', 'button', function () {
 			var temp = ziaci.slice();
 			var vsetky = document.getElementsByClassName("cislo");
 			for (i=0; i<=vsetky.length-1; i++) {
-				// console.log(vsetky[i]);
 				if((vsetky[i]).innerHTML == '???'){
 					vsetky[i].style.fontSize = '12px';
 					vsetky[i].innerHTML = (temp.pop());
@@ -189,9 +188,8 @@ $(document).on('click', 'button', function () {
 });
 
 document.getElementById("reset").onclick = function(){
-	localStorage.setItem("ziaci_5", JSON.stringify(orig_ziaci));
-	location.reload();
-	return false;
+	localStorage.setItem("ziaci_6", JSON.stringify(orig_ziaci));
+	location.reload(true);
 }
 		
 </script>
