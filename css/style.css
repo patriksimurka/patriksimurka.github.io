@@ -89,7 +89,6 @@ h4 {
 }
 
 
-/* responsive*/
 @media (max-width: 400px) {
 	
 	#obal.container-fluid {	
@@ -112,13 +111,32 @@ h4 {
 	width:35px !important;
 	height:35px !important;
 	}
-	
 }
-#reset:hover{
+
+#reset {
 	transform: scale(1.3);
 	cursor:pointer;
 }
 
 .cislo{
 	overflow-x: hidden;
+}
+
+button {
+	width: 100px;
+	margin-left: 20px;
+}
+
+a {
+	color: #ffec73;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+a:hover{
+	color: #aaaaaa;
+	}
+
+.active {
+	text-decoration: underline;
+	color: orange;
 }
