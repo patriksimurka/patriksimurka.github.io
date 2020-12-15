@@ -10,24 +10,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap" rel="stylesheet">
-<style>
 
-button {
-	width: 100px;
-	margin-left: 20px;
-}
-
-a {
-	color: #ffec73;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.active {
-	text-decoration: underline;
-	color: orange;
-}
-
-</style>
 </head>
 
 <body>
@@ -150,7 +133,7 @@ if(storedNames === null || storedNames.length == 0) {
 
 for(i=ziaci.length+1; i<=30; i++){
 	j = i.toString();
-	document.getElementById(j).parentElement.style.display='none';
+	$('#'+j).parent().css({'display':'none'});
 }
 
 var uz = [];
@@ -191,6 +174,6 @@ document.getElementById("reset").onclick = function(){
 	localStorage.removeItem("ziaci_5");
 	location.reload(true);
 }
-		
+
 </script>
 </html>

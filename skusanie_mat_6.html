@@ -10,24 +10,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap" rel="stylesheet">
-<style>
 
-button {
-	width: 100px;
-	margin-left: 20px;
-}
-
-a {
-	color: #ffec73;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}	
-
-.active {
-	text-decoration: underline;
-	color: orange;
-}
-
-</style>
 </head>
 
 <body>
@@ -142,8 +125,6 @@ shuffle(orig_ziaci);
 
 var storedNames = JSON.parse(localStorage.getItem("ziaci_6"));
 
-console.log(storedNames);
-
 if(storedNames === null || storedNames.length == 0){
 	var ziaci = orig_ziaci;
 } else {
@@ -195,5 +176,4 @@ document.getElementById("reset").onclick = function(){
 }
 
 </script>
-
 </html>
