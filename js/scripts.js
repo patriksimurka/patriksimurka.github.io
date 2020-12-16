@@ -30,7 +30,7 @@ function revert() {
 
 function no_click() {
   click = false;
-  setTimeout(function() {click = true;}, 750);  
+  setTimeout(function() {click = true;}, 1000);  
 }
 
 //not in use yet
@@ -75,7 +75,7 @@ function main(skupina) {
             vsetky[i].innerHTML = (temp.pop());
             shuffle(temp);
           }
-          setTimeout(function(){revert();}, 750);
+          setTimeout(function(){revert();}, 1000);
         } 
         shuffle(ziaci);
       };
