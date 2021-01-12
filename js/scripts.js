@@ -75,11 +75,8 @@ function main(skupina) {
             vsetky[i].innerHTML = (temp.pop());
             shuffle(temp);
           }
-<<<<<<< HEAD
-          setTimeout(function(){revert();}, 1000);
-=======
           setTimeout(function(){revert();}, 1500);
->>>>>>> e594f8103b367e0a28b6c2dc534bc62fc9c9ce08
+
         } 
         shuffle(ziaci);
       };
